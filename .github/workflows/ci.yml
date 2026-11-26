@@ -10,12 +10,12 @@ on:
 
 jobs:
   build:
-    runs-on: linux-xarm90
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v4
     - name: Use Node.js
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v4
       with:
-        node-version: 24
+        node-version: 20
     - name: Lint
-      run: npx awesome-lint@0.5.0
+      run: npx awesome-lint@0.2.0
